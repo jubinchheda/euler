@@ -1,3 +1,5 @@
+import fileinput
+
 def _try_composite(a, d, n, s):
     if pow(a, d, n) == 1:
         return False
@@ -46,16 +48,31 @@ _known_primes += [x for x in range(5, 1000, 2) if is_prime(x)]
 	#return True
 			
 
+def inputToList(stringList):
+   for line in fileinput.input():
+      stringList.append(line.rstrip())
+   return stringList
+   
+   
+#stringList = []
+#inputToList(stringList)
+#stringList.pop(0)
+#paramList = []
+#for item in stringList:
+#   paramList.append(item)
+
+   
 j=2
 count =0
 while True:
    #pri1nt j
    if is_prime (j):
       count += 1
+      print count,":",j,","
       if count == 10000:
          break
    j+=1
 	
-print j
+#print j
 	
 	
