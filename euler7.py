@@ -68,7 +68,7 @@ while True:
    #pri1nt j
    if is_prime (j):
       count += 1
-      print count,":",j,","
+      print j,","
       if count == 10000:
          break
    j+=1
